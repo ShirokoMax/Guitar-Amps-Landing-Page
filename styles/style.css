@@ -1,0 +1,244 @@
+/* VARIABLES */
+
+:root {
+    --color-black: #000;
+    --color-jet: #323031;
+    --color-charcoal: #454955;
+    --color-taupe-gray: #8C8686;
+    --color-light-gray: #dde3e4;
+
+    --color-bg-header: var(--color-charcoal);
+    --color-bg-button: var(--color-charcoal);
+    --color-bg-button-hover: var(--color-jet);
+
+    --color-border-button: var(--color-taupe-gray);
+
+    --color-text-primary: var(--color-black);
+    --color-text-secondary: var(--color-taupe-gray);
+
+    --color-link-hover: var(--color-light-gray);
+
+    --color-quote-border: var(--color-taupe-gray);
+
+    --font-size-s: 14px;
+    --font-size-m: 16px;
+    --font-size-l: 20px;
+    --font-size-xl: 24px;
+    --font-size-xxl: 32px;
+}
+
+/* GLOBAL STYLE */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    position: relative;
+    margin: 0;
+}
+
+a {
+
+}
+
+a:hover,
+a:active {
+    color: var(--color-link-hover);
+}
+
+/* HEADER STYLE */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--color-bg-header);
+    color: white;
+    padding: 0 15px;
+}
+
+.header__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.header__logo-img {
+    width: 40px;
+    height: auto;
+}
+
+.header__logo-title {
+    text-align: center;
+    margin: 0;
+    font-size: var(--font-size-xl);
+    line-height: 1;
+    padding: 10px 0;
+}
+
+.header__logo-spacer {
+    width: 40px;
+    height: 1px;
+}
+
+.header__nav {
+    margin-top: 10px;
+}
+
+.header__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: 5px;
+    font-size: var(--font-size-l);
+}
+
+.header__link-item {
+    
+}
+
+.header__link {
+    color: white;
+    text-decoration: none;
+}
+
+.main {
+    margin-top: 100px;
+    padding: 0 15px;
+    font-size: var(--font-size-m);
+    line-height: 1.25;
+    color: var(--color-text-primary);
+}
+
+.main blockquote {
+    margin: 0;
+    padding: 0 15px;
+    font-size: var(--font-size-l);
+    font-style: italic;
+    line-height: 1.25;
+    border-left: 3px solid var(--color-quote-border);
+}
+
+.main blockquote cite {
+    font-size: var(--font-size-m);
+}
+
+.features {
+    
+}
+
+.features__title {
+    padding-top: 20px;
+    margin-top: 10px;
+    font-size: var(--font-size-xl);
+    line-height: 1.25;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.features__product {
+    text-align: center;
+    color: var(--color-text-secondary);
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product > img {
+    width: auto;
+}
+
+.product__name {
+
+}
+
+.product__price {
+
+}
+
+.product__buttons {
+
+}
+
+.product__button {
+    min-width: 90px;
+    padding: 10px 15px;
+    color: white;
+    background-color: var(--color-bg-button);
+    border-radius: 10px;
+    font-family: inherit;
+    cursor: pointer;
+    border: 2px solid var(--color-border-button);
+    margin: 5px;
+}
+
+.product__button:hover {
+    background-color: var(--color-bg-button-hover);
+}
+
+.product__button:active {
+    background-color: var(--color-bg-button-hover);
+}
+
+.product__button[value="ORDER"] {
+    min-width: 200px;
+    margin-top: 15px;
+}
+
+.product__main-characteristic {
+    margin-top: 15px;
+    color: var(--color-text-secondary);
+}
+
+.product__characteristics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    color: var(--color-text-secondary);
+}
+
+.product__characteristics > span {
+    width: 50%;
+    margin-top: 10px;
+    line-height: 1.25;
+}
+
+.product__order {
+
+}
+
+.features__description {
+    text-align: justify;
+}
+
+.features__description::first-letter {
+    font-size: var(--font-size-xxl);
+    font-weight: bold;
+    line-height: 1;
+    float: left;
+    margin-right: 5px;
+    vertical-align: top;
+}
